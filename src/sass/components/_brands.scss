@@ -1,0 +1,38 @@
+.brands {
+    padding: 32px 0;
+
+    // .brands__container
+
+    &__container {}
+
+    // .brands__list
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .brands__item
+
+    &__item {}
+
+    // .brands__link
+
+    &__link {
+        display: inline-block;
+    }
+
+    // .brands__icon
+
+    &__icon {
+        fill: #5F5F5F;
+
+        transition: fill $fastTransition;
+
+        &:hover,
+        &:focus {
+            fill: $accentColor;
+        }
+    }
+}
