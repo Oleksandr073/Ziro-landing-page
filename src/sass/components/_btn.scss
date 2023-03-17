@@ -1,0 +1,10 @@
+.btn {
+    @extend %button-reset;
+    padding: 12px 22px;
+
+    @include fontSizeLineHeight(16px, 20px);
+    color: #FFFFFF;
+
+    background-color: #544CAC;
+    border-radius: 6px;
+}
