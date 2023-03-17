@@ -10,24 +10,50 @@
 
 <body>
 
-    <!-- header -->
-    <header class="header">
-        <div class="header__container container">
+<!-- header -->
+<header class="header">
+    <div class="header__container container">
+        <nav class="header__nav">
+            <a class="header__logo logo" href="">
+                <svg class="logo__icon" aria-label="Ziro logo">
+                    <use href="./svg/sprite.svg#logo"></use>
+                </svg>
+            </a>
+            <ul class="header__nav-items">
+                <li class="header__nav-item"><a class="header__nav-link" href="">Home</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="">Pricing</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="">Blog</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="">Become a member</a></li>
+                <li class="header__nav-item"><a class="header__nav-link" href="">About Us</a></li>
+            </ul>
+        </nav>
+        <form class="header__search search" role="search">
+            <input class="search__input" type="text" role="searchbox" placeholder="Search here...">
+            <button class="search__button" type="submit">
+                <svg class="search__icon">
+                    <use href="./svg/sprite.svg#search"></use>
+                </svg>
+            </button>
+        </form>
+        <p class="header__auth">
+            <a class="header__link" href="">Login</a>
+            &nbsp;/&nbsp;
+            <a class="header__link" href="">Sign Up</a>
+        </p>
+    </div>
+</header>
 
-        </div>
-    </header>
+<!-- main -->
+<main class="main">
 
-    <!-- main -->
-    <main class="main">
+</main>
 
-    </main>
+<!-- footer -->
+<footer class="footer">
+    <div class="footer__container container">
 
-    <!-- footer -->
-    <footer class="footer">
-        <div class="footer__container container">
-
-        </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
 
