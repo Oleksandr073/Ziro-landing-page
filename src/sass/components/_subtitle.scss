@@ -1,0 +1,5 @@
+.subtitle {
+    @include fontSizeLineHeight(14px, 24px);
+    font-weight: 400;
+    color: $subtitleTextColor;
+}
