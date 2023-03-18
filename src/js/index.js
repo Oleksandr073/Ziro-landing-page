@@ -5,6 +5,7 @@ import videoplayer from './modules/videoplayer';
 import Swiper, { Navigation, Controller } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { CountUp } from 'countup.js';
 
 
 new Accordion('.find__items', {
@@ -12,6 +13,7 @@ new Accordion('.find__items', {
     transitionFunction: 'ease',
     title: true,
 });
+
 
 const jobsSwiper = new Swiper('.jobs__slider', {
     modules: [Navigation],
@@ -23,6 +25,7 @@ const jobsSwiper = new Swiper('.jobs__slider', {
     spaceBetween: 65,
     slidesPerView: 'auto',
 });
+
 
 const authorsSwiper = new Swiper('.reviews__author', {
     modules: [Navigation, Controller],
@@ -43,3 +46,17 @@ const reviewsSwiper = new Swiper('.reviews__wrapper', {
 
 authorsSwiper.controller.control = reviewsSwiper;
 reviewsSwiper.controller.control = authorsSwiper;
+
+
+const countElements = document.querySelectorAll('.statistics__number');
+
+const options = {
+    duration: 2,
+    enableScrollSpy: true,
+    scrollSpyOnce: true,
+}
+
+new CountUp(countElements[0], 36789, options).start();
+new CountUp(countElements[1], 45973, options).start();
+new CountUp(countElements[2], 56461, options).start();
+new CountUp(countElements[3], 852, { ...options, suffix: 'k' }).start();
