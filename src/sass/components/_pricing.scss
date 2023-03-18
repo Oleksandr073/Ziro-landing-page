@@ -1,0 +1,118 @@
+.pricing {
+    padding-top: 60px;
+    padding-bottom: 120px;
+
+    // .pricing__container
+
+    &__container {}
+
+    // .pricing__title
+
+    &__title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    // .pricing__subtitle
+
+    &__subtitle {
+        margin-bottom: 75px;
+    }
+
+    // .pricing__items
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    // .pricing__item
+
+    &__item {
+        @include flexBasis(3, 15px);
+        margin: 15px;
+        padding: 62px 65px;
+
+        text-align: center;
+        background-color: #FFFFFF;
+        box-shadow: -1px 1px 20px rgba(128, 128, 128, 0.1);
+        border-radius: 20px;
+
+        transition: background-color $fastTransition, box-shadow $fastTransition, transform $fastTransition;
+
+        &:hover {
+            background-color: #F9FAFF;
+            box-shadow: 0px 12px 30px rgba(71, 71, 71, 0.15);
+
+            transform: translateY(-30px);
+        }
+    }
+
+    // .pricing__name
+
+    &__name {
+        margin-bottom: 30px;
+
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #4238AF;
+    }
+
+    // .pricing__price
+
+    &__price {
+        margin-bottom: 24px;
+
+        font-family: 'Oswald', 'sans-serif';
+        @include fontSizeLineHeight(45px, 50px);
+        color: $primaryTextColor;
+    }
+
+    // .pricing__period
+
+    &__period {
+        margin-bottom: 70px;
+
+        @include fontSizeLineHeight(16px, 18px);
+        color: #8A86B9;
+    }
+
+    // .pricing__points
+
+    &__points {
+        margin-bottom: 47px;
+        text-align: left;
+    }
+
+    // .pricing__point
+
+    &__point {
+        display: flex;
+        align-items: center;
+
+        @include fontSizeLineHeight(14px, 20px);
+        color: $subtitleTextColor;
+
+        &:not(:last-child) {
+            margin-bottom: 19px;
+        }
+    }
+
+    // .pricing__icon
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 11px;
+
+        fill: $accentColor;
+    }
+
+    // .pricing__button
+
+    &__button {
+        @extend %button-reset;
+    }
+}
