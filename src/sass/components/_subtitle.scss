@@ -1,4 +1,8 @@
 .subtitle {
+    max-width: 544px;
+    margin: 0 auto;
+    text-align: center;
+    
     @include fontSizeLineHeight(14px, 24px);
     font-weight: 400;
     color: $subtitleTextColor;
