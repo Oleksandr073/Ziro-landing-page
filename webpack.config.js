@@ -80,6 +80,13 @@ module.exports = {
                 },
             },
             {
+                test: /\.(mp4|mov|webm|avi|mkv|wmv|flv)$/,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/video/[name][ext]',
+                },
+            },
+            {
                 test: /\.m?js$/,
                 exclude: /node_modules/,
                 use: {
