@@ -1,0 +1,6 @@
+.title {
+    font-family: 'Oswald', 'sans-serif';
+    @include fontSizeLineHeight(40px, 50px);
+    font-weight: 400;
+    color: $primaryTextColor;
+}
