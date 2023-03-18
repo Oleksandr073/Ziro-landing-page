@@ -112,16 +112,16 @@
 
         padding: 47px 75px;
 
-        background: #FFFFFF;
+        background-color: #FFFFFF;
         box-shadow: -1px 1px 20px rgba(128, 128, 128, 0.1);
         border-radius: 20px;
 
-        transition: background $fastTransition, box-shadow $fastTransition, transform $fastTransition;
+        transition: background-color $fastTransition, box-shadow $fastTransition, transform $fastTransition;
 
         position: relative;
 
         &:hover {
-            background: #F9FAFF;
+            background-color: #F9FAFF;
             box-shadow: 0px 12px 30px rgba(71, 71, 71, 0.15);
 
             transform: translateY(-35px);
