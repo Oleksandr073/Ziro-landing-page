@@ -98,10 +98,7 @@
 
     // .reviews__item
 
-    &__item {
-        display: flex;
-        flex-direction: column;
-    }
+    &__item {}
 
     // .reviews__name
 
@@ -126,8 +123,8 @@
     // .reviews__rating
 
     &__rating {
-        align-self: flex-end;
         display: flex;
+        justify-content: end;
         align-items: center;
         margin-bottom: 6px;
 
