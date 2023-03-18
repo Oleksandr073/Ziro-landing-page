@@ -1,0 +1,134 @@
+.find {
+    padding-top: 32px;
+    padding-bottom: 60px;
+
+    // .find__container
+
+    &__container {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    // .find__content
+
+    &__content {
+        max-width: 435px;
+        margin-right: 40px;
+    }
+
+    // .find__video
+
+    &__video {
+        flex-grow: 1;
+        max-width: 635px;
+        padding-bottom: 39%;
+
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    // .find__suptitle
+
+    &__suptitle {
+        margin-bottom: 19px;
+
+        font-family: 'Oswald', 'sans-serif';
+        @include fontSizeLineHeight(12px, 17px);
+        color: $accentColor;
+    }
+
+    // .find__title
+
+    &__title {
+        margin-bottom: 46px;
+    }
+
+    // .find__items
+
+    &__items {}
+
+    // .find__item
+
+    &__item {
+        background-color: #F5F7FF;
+        border-radius: 8px;
+
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+    }
+
+    // .find__button
+
+    &__button {
+        @extend %button-reset;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 14px 24px 14px 14px;
+    }
+
+    // .find__number
+
+    &__number {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+
+        line-height: 30px;
+        border-radius: 6px;
+
+        .find__item:nth-child(1) & {
+            color: #9444C9;
+            background-color: #F3E0FF;
+        }
+
+        .find__item:nth-child(2) & {
+            color: #626FFF;
+            background-color: #E7E9FE;
+        }
+
+        .find__item:nth-child(3) & {
+            color: #FF5C00;
+            background-color: #FFDECC;
+        }
+    }
+
+    // .find__heading
+
+    &__heading {
+        margin-right: auto;
+
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    // .find__arrow
+
+    &__arrow {
+        width: 17px;
+        height: 10px;
+
+        fill: #4238AF;
+
+        transition: transform 400ms ease;
+
+        .find__item.accordion-active & {
+            transform: rotate(180deg);
+        }
+    }
+
+    // .find__text
+
+    &__text {
+        @include fontSizeLineHeight(12px, 22px);
+        color: $subtitleTextColor;
+
+        p {
+            padding-left: 59px;
+            padding-bottom: 21px;
+        }
+    }
+
+}
