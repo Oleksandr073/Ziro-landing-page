@@ -1,0 +1,157 @@
+.footer {
+    padding-top: 110px; 
+
+    background-color: #DBE2FF;
+    border-radius: 30px 30px 0 0;
+
+    // .footer__container
+
+    &__container {}
+
+    // .footer__menu
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 100px;
+
+        border-bottom: 2px solid #625BAE;
+    }
+
+    // .footer__menu-item
+
+    &__menu-item {}
+
+    // .footer__heading
+
+    &__heading {
+        margin-bottom: 22px;
+
+        font-family: 'Oswald', 'sans-serif';
+        font-size: 24px;
+        color: $primaryTextColor;
+    }
+
+    // .footer__items
+
+    &__items {}
+
+    // .footer__item
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+    }
+
+    // .footer__link
+
+    &__link {
+        text-decoration: none;
+        font-size: 16px;
+        color: #717171;
+
+        transition: color $fastTransition;
+
+        &:hover,
+        &:focus {
+            color: #4238AF;
+        }
+    }
+
+    // .footer__bottom
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+    }
+
+    // .footer__logo
+
+    &__logo {}
+
+    // .footer__help
+
+    &__help {
+        display: flex;
+    }
+
+    // .footer__help-item
+
+    &__help-item {
+
+        &:not(:last-child) {
+            margin-right: 65px;
+        }
+    }
+
+    // .footer__help-link
+
+    &__help-link {
+        text-decoration: none;
+        font-size: 12px;
+        color: #3A2E5C;
+        
+        transition: color $fastTransition;
+
+        &:hover,
+        &:focus {
+            color: #FFFFFF;
+        }
+    }
+
+    // .footer__socials
+
+    &__socials {
+        display: flex;
+    }
+
+    // .footer__social
+
+    &__social {
+
+        &:not(:last-child) {
+            margin-right: 9px;
+        }
+    }
+
+    // .footer__social-link
+
+    &__social-link {
+        display: inline-block;
+        width: 29px;
+        height: 29px;
+
+        background-color: #FFFFFF;
+        border-radius: 50%;
+
+        transition: background-color $fastTransition;
+
+        position: relative;
+
+        &:hover,
+        &:focus {
+            background-color: #4238AF;
+
+            .footer__icon {
+                fill: #FFFFFF;
+            }
+        }
+    }
+
+    // .footer__icon
+
+    &__icon {
+        width: 16px;
+        height: 14px;
+
+        fill: #979797;
+
+        transition: fill $fastTransition;
+
+        @extend %center;
+    }
+}
