@@ -1,4 +1,4 @@
-import { FIXED_HEADER_CLASS } from "../constants/headerFixedClass";
+import { HEADER_FIXED_CLASS } from "../constants/headerFixedClass";
 import { MOBILE_MENU_ATTR } from "../constants/mobileMenuAttr";
 
 export default (function () {
@@ -11,15 +11,15 @@ export default (function () {
 
     function fixHeader() {
         if (window.pageYOffset > heroSectionHeight) {
-            if (!header.classList.contains(FIXED_HEADER_CLASS)) {
+            if (!header.classList.contains(HEADER_FIXED_CLASS)) {
                 body.removeAttribute(MOBILE_MENU_ATTR);
             }
-            header.classList.add(FIXED_HEADER_CLASS);
+            header.classList.add(HEADER_FIXED_CLASS);
         } else {
-            if (header.classList.contains(FIXED_HEADER_CLASS)) {
+            if (header.classList.contains(HEADER_FIXED_CLASS)) {
                 body.removeAttribute(MOBILE_MENU_ATTR);
             }
-            header.classList.remove(FIXED_HEADER_CLASS);
+            header.classList.remove(HEADER_FIXED_CLASS);
         }
     }
 

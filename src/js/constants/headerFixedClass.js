@@ -1,1 +1,1 @@
-export const FIXED_HEADER_CLASS = 'header--fixed';
+export const HEADER_FIXED_CLASS = 'header--fixed';
