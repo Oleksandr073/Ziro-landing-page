@@ -25,13 +25,19 @@
         display: flex;
         align-items: center;
         gap: 30px;
+
+        @include mediaMax($medium) {
+            flex-wrap: wrap;
+        }
     }
 
     // .reviews__author
 
     &__author {
         flex-shrink: 0;
-        width: 350px;
+        width: 100%;
+        max-width: 350px;
+        min-width: 290px;
         height: 350px;
     }
     
@@ -42,8 +48,6 @@
     // .reviews__author-item
 
     &__author-item {
-        min-width: 350px;
-
         background-color: #CED5F4;
         border-radius: 50% 0 50% 50%;
         overflow: hidden;
@@ -231,6 +235,8 @@
         display: flex;
 
         text-decoration: none;
+
+        position: relative;
     }
 
     // .reviews__another-author
@@ -245,20 +251,21 @@
 
         object-fit: cover;
 
-        position: relative;
+        position: absolute;
+        top: 0;
 
         &:nth-child(1) {
-            left: 66px;
+            right: 84px;
             z-index: 1;
         }
 
         &:nth-child(2) {
-            left: 44px;
+            right: 56px;
             z-index: 2;
         }
 
         &:nth-child(3) {
-            left: 22px;
+            right: 28px;
             z-index: 3;
         }
     }
