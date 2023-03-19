@@ -9,23 +9,39 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        margin: -15px 0;
     }
 
     // .brands__item
 
-    &__item {}
+    &__item {
+        display: flex;
+        justify-content: center;
+        margin: 15px 0;
+
+        @include mediaMax($large) {
+            flex-basis: calc(100% / 3);
+        }
+
+        @include mediaMax($small) {
+            flex-basis: calc(100% / 2);
+        }
+    }
 
     // .brands__link
 
     &__link {
+        width: 100%;
         display: inline-block;
     }
 
     // .brands__icon
 
     &__icon {
+        width: 100%;
         fill: #5F5F5F;
 
         transition: fill $fastTransition;
