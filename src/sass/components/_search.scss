@@ -1,7 +1,7 @@
 .search {
     display: flex;
     align-items: center;
-    width: 307px;
+    max-width: 307px;
     height: 35px;
 
     background-color: #FFFFFF;
@@ -10,6 +10,7 @@
     // .search__input
 
     &__input {
+        width: 100%;
         @extend %input-reset;
         flex-grow: 1;
         padding: 10px 19px;

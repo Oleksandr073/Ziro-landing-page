@@ -1,29 +1,57 @@
 .header {
     width: 100%;
+    padding: 10px 0;
 
     position: absolute;
-    top: 25px;
+    top: 15px;
     left: 0;
-    z-index: 1;
+    z-index: 2;
+
+    &--fixed {
+        background-color: #FFFFFF;
+        box-shadow: 0px 0 10px rgba(0, 0, 0, 0.3);
+
+        position: fixed;
+        top: 0;
+
+        animation: header-show $fastTransition;
+
+        @keyframes header-show {
+            0% {
+                opacity: 0;
+                transform: translateY(-101%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
 
     // .header__container
 
     &__container {
         display: flex;
         align-items: center;
+
+        position: relative;
+        z-index: 2;
     }
 
     // .header__nav
 
     &__nav {
         display: flex;
-        margin-right: auto;
+        margin-right: 20px;
     }
 
     // .header__logo
 
     &__logo {
-        margin-right: 56px;
+        
+        @include mediaMin($xlarge) {
+            margin-right: 56px;
+        }
     }
 
     // .header__nav-items
@@ -31,6 +59,10 @@
     &__nav-items {
         display: flex;
         align-items: center;
+
+        @include mediaMax($xlarge) {
+            display: none;
+        }
     }
 
     // .header__nav-item
@@ -61,12 +93,21 @@
     // .header__search
 
     &__search {
-        margin-right: 26px;
+        margin-left: auto;
+
+        @include mediaMin($medium) {
+            margin-right: 26px;
+        }
     }
 
     // .header__auth
 
-    &__auth {}
+    &__auth {
+
+        @include mediaMax($medium) {
+            display: none;
+        }
+    }
 
     // .header__link
 
@@ -83,6 +124,24 @@
         &:hover,
         &:focus {
             color: $accentColor;
+        }
+    }
+
+    // .header__burger
+
+    &__burger {
+        flex-shrink: 0;
+        margin-left: 40px;
+    }
+
+    // .header__mobile-menu
+
+    &__mobile-menu {}
+
+    &__burger,
+    &__mobile-menu {
+        @include mediaMin($xlarge) {
+            display: none;
         }
     }
 }
