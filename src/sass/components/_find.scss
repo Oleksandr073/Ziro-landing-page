@@ -6,14 +6,27 @@
 
     &__container {
         display: flex;
+        flex-wrap: wrap;
         align-items: flex-end;
+
+        @include mediaMax($large) {
+            max-width: 635px;
+            justify-content: center;
+        }
     }
 
     // .find__content
 
     &__content {
-        max-width: 435px;
-        margin-right: 40px;
+        
+        @include mediaMin($large) {
+            max-width: 435px;
+            margin-right: 40px;
+        }
+
+        @include mediaMax($large) {
+            margin-bottom: 50px;
+        }
     }
 
     // .find__video
@@ -25,6 +38,11 @@
 
         border-radius: 20px;
         overflow: hidden;
+
+        @include mediaMax($large) {
+            width: 100%;
+            padding-bottom: 57%;
+        }
     }
 
     // .find__suptitle
@@ -45,7 +63,9 @@
 
     // .find__items
 
-    &__items {}
+    &__items {
+        max-width: 635px;
+    }
 
     // .find__item
 

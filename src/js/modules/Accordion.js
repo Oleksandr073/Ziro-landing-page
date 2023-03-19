@@ -19,7 +19,9 @@ export class Accordion {
         this.addAttributes();
         this.addStyles();
         this.clickButtons();
-        this.setHeightAccordionWrapper();
+        if (document.documentElement.clientWidth > 992) {
+            this.setHeightAccordionWrapper();
+        }
     }
 
     addAttributes() {
