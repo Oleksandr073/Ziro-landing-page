@@ -80,7 +80,7 @@
 
     &__link {
         text-decoration: none;
-        font-size: 16px;
+        @include fontSizeLineHeight(16px, 20px);
         color: #717171;
 
         transition: color $fastTransition;
@@ -112,16 +112,11 @@
         display: flex;
         flex-wrap: wrap;
         gap: 10px 65px;
-        // margin-top: -10px;
-        // margin-left: -65px;
     }
 
     // .footer__help-item
 
-    &__help-item {
-        // margin-top: 10px;
-        // margin-left: 65px;
-    }
+    &__help-item {}
 
     // .footer__help-link
 
