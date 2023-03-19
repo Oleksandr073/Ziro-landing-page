@@ -24,15 +24,21 @@
     &__items {
         display: flex;
         flex-wrap: wrap;
-        margin: -15px;
+        justify-content: center;
+        margin: -25px -15px;
     }
 
     // .pricing__item
 
     &__item {
-        @include flexBasis(3, 15px);
-        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        margin: 25px 15px;
         padding: 62px 65px;
+
+        @include mediaMax($xlarge) {
+            padding: 40px;
+        }
 
         text-align: center;
         background-color: #FFFFFF;
@@ -113,6 +119,6 @@
     // .pricing__button
 
     &__button {
-        @extend %button-reset;
+        margin-top: auto;
     }
 }
