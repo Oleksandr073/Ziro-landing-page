@@ -10,8 +10,18 @@
 
     &__items {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+        margin: -20px 0;
         padding: 74px 115px;
+
+        @include mediaMax($large) {
+            padding: 40px 60px;
+        }
+
+        @include mediaMax($small) {
+            padding: 20px 30px;
+        }
 
         background-color: #CED5F4;
         border-radius: 30px;
@@ -20,7 +30,17 @@
     // .statistics__item
 
     &__item {
+        margin: 20px 0;
+
         text-align: center;
+
+        @include mediaMax($medium) {
+            flex-basis: calc(100% / 2);
+        }
+
+        @include mediaMax(400px) {
+            flex-basis: 100%;
+        }
     }
 
     // .statistics__number
