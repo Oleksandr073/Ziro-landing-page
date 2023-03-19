@@ -3,4 +3,5 @@
     @include fontSizeLineHeight(40px, 50px);
     font-weight: 400;
     color: $primaryTextColor;
+    letter-spacing: 0.05em;
 }
