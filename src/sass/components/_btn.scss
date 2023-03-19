@@ -11,6 +11,11 @@
 
     transition: color $fastTransition, background-color $fastTransition;
 
+    &:hover, 
+    &:focus {
+        background-color: $accentColor;
+    }
+
     // .btn--circle
 
     &--circle {

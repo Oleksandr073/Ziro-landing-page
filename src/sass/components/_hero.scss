@@ -64,6 +64,21 @@
         @extend %button-reset;
         display: flex;
         align-items: center;
+
+        transition: color $fastTransition;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
+
+            .hero__icon {
+                background-color: $accentColor;
+            }
+
+            svg {
+                fill: #FFFFFF;
+            }
+        }
     }
 
     // .hero__icon
@@ -78,6 +93,8 @@
 
         position: relative;
 
+        transition: background-color $fastTransition;
+
         svg {
             width: 23px;
             height: 23px;
@@ -85,6 +102,8 @@
             fill: $accentColor;
 
             @extend %center;
+
+            transition: fill $fastTransition;
         }
     }
 }

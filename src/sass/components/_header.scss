@@ -49,6 +49,13 @@
 
         color: #272323;
         text-decoration: none;
+
+        transition: color $fastTransition;
+
+        &:hover,
+        &:focus {
+            color: #4238AF;
+        }
     }
 
     // .header__search
@@ -69,6 +76,13 @@
 
         &:first-child {
             color: #4238AF;
+        }
+
+        transition: color $fastTransition;
+
+        &:hover,
+        &:focus {
+            color: $accentColor;
         }
     }
 }

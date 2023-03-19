@@ -36,6 +36,17 @@
 
         background-color: rgba(192, 194, 248, 0.22);
         border-radius: 50%;
+
+        transition: background-color $fastTransition;
+
+        &:hover,
+        &:focus {
+            background-color: $accentColor;
+
+            .search__icon {
+                fill: #FFFFFF;
+            }
+        }
     }
 
     // .search__icon
@@ -49,5 +60,7 @@
         position: relative;
         top: 1px;
         left: 1px;
+
+        transition: fill $fastTransition;
     }
 }
