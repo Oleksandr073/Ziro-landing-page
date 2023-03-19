@@ -4,4 +4,8 @@
     font-weight: 400;
     color: $primaryTextColor;
     letter-spacing: 0.05em;
+
+    @include mediaMax($medium) {
+        font-size: 32px;
+    }
 }
