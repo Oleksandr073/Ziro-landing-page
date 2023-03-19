@@ -6,6 +6,8 @@ import { Accordion } from './modules/Accordion';
 import videoplayer from './modules/videoplayer';
 import Swiper, { Navigation, Controller } from 'swiper';
 import { CountUp } from 'countup.js';
+import fixedHeader from './modules/fixedHeader';
+import burgerMenu from './modules/burgerMenu';
 
 
 new Accordion('.find__items', {
