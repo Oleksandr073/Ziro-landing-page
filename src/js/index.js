@@ -1,10 +1,10 @@
+import 'swiper/css';
+import 'swiper/css/navigation';
 import '../index.html';
 import '../sass/style.scss';
 import { Accordion } from './modules/Accordion';
 import videoplayer from './modules/videoplayer';
 import Swiper, { Navigation, Controller } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import { CountUp } from 'countup.js';
 
 
