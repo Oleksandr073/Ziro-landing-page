@@ -1,0 +1,90 @@
+.mobile-menu { 
+    max-width: 290px;
+    padding: 20px 30px;
+
+    @include mediaMax($small) {
+        width: 290px;
+    }
+
+    background-color: #544CAC;
+    border-radius: 0 0 20px 20px;
+
+    @include fontSizeLineHeight(16px, 24px); 
+    color: #FFFFFF;
+
+    position: absolute;
+    top: 100%;
+    right: 30px;
+    z-index: 1;
+
+    @include mediaMax($medium) {
+        right: 15px;
+    }
+
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+
+    transition: transform $fastTransition, opacity $fastTransition;
+
+    body[data-menu-active] & {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+
+    // .mobile-menu__auth
+
+    &__auth {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        @include mediaMin($medium) {
+            display: none;
+        }
+    }
+
+    // .mobile-menu__auth-link
+
+    &__auth-link {
+        display: block;
+
+        color: inherit;
+        text-decoration: none;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+
+    // .mobile-menu__nav
+
+    &__nav {}
+
+    // .mobile-menu__items
+
+    &__items {}
+
+    // .mobile-menu__item
+
+    &__item {
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    // .mobile-menu__link
+
+    &__link {
+        color: inherit;
+        text-decoration: none;
+    
+        transition: color $fastTransition;
+    
+        &:hover,
+        &:focus {
+            color: $accentColor;
+        }
+    }
+}
