@@ -154,9 +154,7 @@
         }
 
         background-color: #FFFFFF;
-        background-color: rgb(0, 255, 213);
         box-shadow: -1px 1px 20px rgba(128, 128, 128, 0.1);
-        box-shadow: -1px 1px 20px rgba(128, 128, 128, 1);
         border-radius: 20px;
 
         transition: background-color $fastTransition, box-shadow $fastTransition, transform $fastTransition;
@@ -166,7 +164,6 @@
         &:hover {
             background-color: #F9FAFF;
             box-shadow: 0px 12px 30px rgba(71, 71, 71, 0.15);
-            box-shadow: 0px 12px 30px rgba(71, 71, 71, 1);
 
             transform: translateY(-35px);
         }
