@@ -17,6 +17,6 @@ https://Oleksandr073.github.io/Ziro-landing-page/
 
 ## Template 👇
 
-https://www.figma.com/file/Ziro
+https://www.figma.com/file/VjpoB9cCeE3S0zdpl9ZzrL/Find-out-talented-freelancer
 
 <img align="left" src="./Ziro-landing-page_1440.jpg"/>
