@@ -125,6 +125,7 @@
 
             @include mediaMax($medium) {
                 padding: 15px;
+                padding-top: 50px;
             }
         }
     }
