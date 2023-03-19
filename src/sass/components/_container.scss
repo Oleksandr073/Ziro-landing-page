@@ -3,4 +3,8 @@
     max-width: 1170px;
     padding: 0 30px;
     margin: 0 auto;
+
+    @include mediaMax($medium) {
+        padding: 0 15px;
+    }
 }
