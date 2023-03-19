@@ -4,17 +4,50 @@
     // .hero__container
 
     &__container {
-        background-image: url('../img/hero/hero-bg.png'), url('../img/hero/circles.svg');
+        background-image: 
+            linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
+            url('../img/hero/hero-bg.png'), 
+            url('../img/hero/circles.svg');
         background-repeat: no-repeat;
-        background-position: bottom right 90px, bottom 156px right;
+        background-position: 
+            center, 
+            bottom right 120px, 
+            bottom 156px right 30px;
+
+        @include mediaMax($large) {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
+                url('../img/hero/hero-bg.png'), 
+                url('../img/hero/circles.svg');
+        }
+
+        @include mediaMax($small) {
+            background-position: 
+                center, 
+                bottom right, 
+                bottom 156px right -90px;
+        }
     }
 
     // .hero__content
 
     &__content {
+        width: 48%;
         padding-top: 193px;
         padding-bottom: 126px;
-        width: 50%;
+
+        @include mediaMax($large) {
+            width: 75%;
+        }
+
+        @include mediaMax($medium) {
+            width: 100%;
+        }
+
+        @include mediaMax($small) {
+            padding-top: 120px;
+            padding-bottom: 70px;
+        }
     }
 
     // .hero__title
@@ -26,6 +59,11 @@
         @include fontSizeLineHeight(45px, 55px);
         font-weight: 400;
         color: $primaryTextColor;
+        letter-spacing: 0.07em;
+
+        @include mediaMax($medium) {
+            font-size: 36px;
+        }
 
         span {
             color: $accentColor;
@@ -39,22 +77,31 @@
 
         @include fontSizeLineHeight(14px, 24px);
         color: $subtitleTextColor;
+
+        @include mediaMax($large) {
+            color: $primaryTextColor;
+        }
     }
 
     // .hero__buttons
 
     &__buttons {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        margin: -10px -17px;
 
         font-size: 16px;
+    }
+
+    &__button,
+    &__watch {
+        margin: 10px 17px;
     }
 
     // .hero__button
 
     &__button {
-        margin-right: 34px;
-
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     }
 
