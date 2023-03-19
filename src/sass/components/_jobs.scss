@@ -4,7 +4,14 @@
 
     // .jobs__container
 
-    &__container {}
+    &__container {
+        max-width: 2200px;
+        margin: 0 auto;
+    }
+
+    // .jobs__header
+
+    &__header {}
 
     // .jobs__title
 
@@ -26,14 +33,30 @@
         align-items: center;
         width: 100%;
         margin-bottom: 70px;
-        padding-left: 70px;
+        
+        @include mediaMax($medium) {
+            flex-wrap: wrap-reverse;
+            margin-bottom: 40px;
+        }
+
+        @include mediaMin($medium) {
+            padding-left: 70px;
+        }
     }
 
     // .jobs__buttons
 
     &__buttons {
         display: flex;
-        margin-right: 20px;
+
+        @include mediaMin($medium) {
+            margin-right: 20px;
+        }
+
+        @include mediaMax($medium) {
+            width: 100%;
+            justify-content: center;
+        }
     }
 
     // .jobs__button
@@ -90,19 +113,33 @@
 
     // .jobs__slider
 
-    &__slider {}
+    &__slider {
+
+        @include mediaMax($medium) {
+            max-width: 440px;
+        }
+
+        &.swiper {
+            padding: 30px;
+            padding-top: 50px;
+
+            @include mediaMax($medium) {
+                padding: 15px;
+            }
+        }
+    }
 
     // .jobs__items
 
-    &__items {
-        padding: 30px;
-        padding-top: 50px;
-    }
+    &__items {}
 
     // .jobs__item-wrapper
 
     &__item-wrapper {
-        max-width: 380px;
+        
+        @include mediaMin($medium) {
+            max-width: 380px;
+        }
     }
 
     // .jobs__item
@@ -112,8 +149,14 @@
 
         padding: 47px 75px;
 
+        @include mediaMax($small) {
+            padding: 30px 20px;
+        }
+
         background-color: #FFFFFF;
+        background-color: rgb(0, 255, 213);
         box-shadow: -1px 1px 20px rgba(128, 128, 128, 0.1);
+        box-shadow: -1px 1px 20px rgba(128, 128, 128, 1);
         border-radius: 20px;
 
         transition: background-color $fastTransition, box-shadow $fastTransition, transform $fastTransition;
@@ -123,6 +166,7 @@
         &:hover {
             background-color: #F9FAFF;
             box-shadow: 0px 12px 30px rgba(71, 71, 71, 0.15);
+            box-shadow: 0px 12px 30px rgba(71, 71, 71, 1);
 
             transform: translateY(-35px);
         }
@@ -305,5 +349,9 @@
         left: 50%;
 
         transform: translateX(50%);
+
+        @include mediaMax($large) {
+            transform: translateX(-50%);
+        }
     }
 }

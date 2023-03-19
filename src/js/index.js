@@ -23,7 +23,12 @@ const jobsSwiper = new Swiper('.jobs__slider', {
     },
     loop: true,
     spaceBetween: 65,
-    slidesPerView: 'auto',
+    slidesPerView: 1,
+    breakpoints: {
+        769: {
+            slidesPerView: 'auto',
+        },
+    }
 });
 
 
