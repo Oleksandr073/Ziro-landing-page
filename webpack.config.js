@@ -2,6 +2,7 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 const rimraf = require('rimraf');
 
 const mode = process.env.NODE_ENV || 'development';
@@ -55,6 +56,16 @@ module.exports = {
                 use: [
                     isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
                     'css-loader',
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            postcssOptions: {
+                                plugins: isDev ? [] : [
+                                    autoprefixer,
+                                ],
+                            },
+                        },
+                    },
                     'sass-loader',
                 ]
             },
