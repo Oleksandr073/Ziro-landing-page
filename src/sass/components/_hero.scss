@@ -27,13 +27,14 @@
                 linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
                 url('../img/hero/hero-bg.png'), 
                 url('../img/hero/circles.svg');
-        }
 
-        @include mediaMaxDPR2($large) {
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
-                url('../img/hero/hero-bg@2x.png'),
-                url('../img/hero/circles.svg');
+            @include mediaDPR2() {
+                background-image:
+                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+                    url('../img/hero/hero-bg@2x.png'),
+                    url('../img/hero/circles.svg');
+                ;
+            }
         }
 
         @include mediaMax($small) {

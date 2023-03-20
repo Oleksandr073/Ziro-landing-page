@@ -23,27 +23,3 @@
         @content;
     }
 }
-
-@mixin mediaMinDPR2($min-width) {
-    @media screen and (min-width: ($min-width + 1px)) and (min-device-pixel-ratio: 2),
-    screen and (min-width: ($min-width + 1px)) and (min-resolution: 192dpi),
-    screen and (min-width: ($min-width + 1px)) and (min-resolution: 2dppx) {
-        @content;
-    }
-}
-
-@mixin mediaMaxDPR2($max-width) {
-    @media screen and (max-width: $max-width) and (min-device-pixel-ratio: 2),
-    screen and (max-width: $max-width) and (min-resolution: 192dpi),
-    screen and (max-width: $max-width) and (min-resolution: 2dppx) {
-        @content;
-    }
-}
-
-@mixin mediaMaxMinDPR2($max-width, $min-width) {
-    @media screen and (max-width: $max-width) and (min-width: ($min-width + 1px)) and (min-device-pixel-ratio: 2),
-    screen and (max-width: $max-width) and (min-width: ($min-width + 1px)) and (min-resolution: 192dpi),
-    screen and (max-width: $max-width) and (min-width: ($min-width + 1px)) and (min-resolution: 2dppx) {
-        @content;
-    }
-}
