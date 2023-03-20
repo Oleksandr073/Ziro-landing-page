@@ -9,6 +9,22 @@
         object-fit: cover;
 
         @extend %center;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('../img/find/video-preview.jpg');
+        background-image: image-set(
+            url('../img/find/video-preview.webp') type('image/webp'),
+            url('../img/find/video-preview.jpg') type('image/jpeg')
+        );
+        
+        @include mediaDPR2() {
+            background-image: url('../img/find/video-preview@2x.jpg');
+            background-image: image-set(
+                url('../img/find/video-preview@2x.webp') type('image/webp'),
+                url('../img/find/video-preview@2x.jpg') type('image/jpeg')
+            );
+        }
     }
 
     // .video__button
