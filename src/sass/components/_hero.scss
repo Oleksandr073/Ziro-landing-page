@@ -13,6 +13,7 @@
             center, 
             bottom right 120px, 
             bottom 156px right 30px;
+        background-size: auto, 479px auto, auto;
 
         @include mediaMax($large) {
             background-image: 
