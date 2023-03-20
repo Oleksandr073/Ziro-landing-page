@@ -62,8 +62,10 @@
 
         position: absolute;
         bottom: 0;
-        right: 0;
+        left: 50%;
         z-index: 1;
+
+        transform: translateX(-50%);
     }
 
     &__circles-decor,
@@ -128,7 +130,7 @@
 
     &__rating {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         margin-bottom: 6px;
 
@@ -194,6 +196,8 @@
 
         transition: background-color $fastTransition;
 
+        position: relative;
+
         &:first-child {
             margin-right: 15px;
         }
@@ -221,6 +225,7 @@
     // .reviews__icon
 
     &__icon {
+        @extend %center;
         width: 22px;
         height: 18px;
 
@@ -254,17 +259,17 @@
         position: absolute;
         top: 0;
 
-        &:nth-child(1) {
+        picture:nth-child(1) & {
             right: 84px;
             z-index: 1;
         }
 
-        &:nth-child(2) {
+        picture:nth-child(2) & {
             right: 56px;
             z-index: 2;
         }
 
-        &:nth-child(3) {
+        picture:nth-child(3) & {
             right: 28px;
             z-index: 3;
         }
