@@ -4,38 +4,44 @@
     // .hero__container
 
     &__container {
-        background-image: 
-            linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
-            url('../img/hero/hero-bg.png'), 
-            url('../img/hero/circles.svg');
         background-repeat: no-repeat;
+        background-size: auto, 479px auto, auto;
+
+        @mixin bg($opacityValue, $retina: '') {
+
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, $opacityValue), rgba(255, 255, 255, $opacityValue)), 
+                url('../img/hero/hero-bg#{$retina}.png'), 
+                url('../img/hero/circles.svg');
+
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, $opacityValue), rgba(255, 255, 255, $opacityValue)), 
+                image-set(
+                    url('../img/hero/hero-bg#{$retina}.webp') type('image/webp'),
+                    url('../img/hero/hero-bg#{$retina}.png') type('image/x-png')
+                ),
+                url('../img/hero/circles.svg');   
+                
+        }
+
+        @include bg(0);
+
+        @include mediaDPR2() {
+            @include bg(0, '@2x');
+        }
+
+        @include mediaMax($large) {
+            @include bg(0.6);
+
+            @include mediaDPR2() {
+                @include bg(0.6, '@2x');
+            }
+        }
+
         background-position: 
             center, 
             bottom right 120px, 
             bottom 156px right 30px;
-        background-size: auto, 479px auto, auto;
-
-        @include mediaDPR2() {
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-                url('../img/hero/hero-bg@2x.png'),
-                url('../img/hero/circles.svg');;
-        }
-
-        @include mediaMax($large) {
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
-                url('../img/hero/hero-bg.png'), 
-                url('../img/hero/circles.svg');
-
-            @include mediaDPR2() {
-                background-image:
-                    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-                    url('../img/hero/hero-bg@2x.png'),
-                    url('../img/hero/circles.svg');
-                ;
-            }
-        }
 
         @include mediaMax($small) {
             background-position: 
