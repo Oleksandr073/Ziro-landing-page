@@ -9,22 +9,7 @@
         object-fit: cover;
 
         @extend %center;
-
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-image: url('../img/find/video-preview.jpg');
-        background-image: image-set(
-            url('../img/find/video-preview.webp') type('image/webp'),
-            url('../img/find/video-preview.jpg') type('image/jpeg')
-        );
-        
-        @include mediaDPR2() {
-            background-image: url('../img/find/video-preview@2x.jpg');
-            background-image: image-set(
-                url('../img/find/video-preview@2x.webp') type('image/webp'),
-                url('../img/find/video-preview@2x.jpg') type('image/jpeg')
-            );
-        }
+        z-index: 2;
     }
 
     // .video__button
@@ -38,6 +23,7 @@
         border-radius: 50%;
 
         @extend %center;
+        z-index: 2;
     }
 
     // .video__icon
@@ -49,5 +35,17 @@
         fill: #FFFFFF;  
         
         @extend %center;
+    }
+
+    // .video__poster
+
+    &__poster {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @extend %center;
+        z-index: 1;
     }
 }
