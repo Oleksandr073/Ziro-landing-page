@@ -13,7 +13,7 @@
 
 ## Github Page 💻
 
-https://Oleksandr073.github.io/Ziro-landing-page/
+https://Oleksandr073.github.io/Ziro-landing-page/dist/
 
 ## Template 👇
 
