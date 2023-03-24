@@ -1,3 +1,4 @@
+import throttle from "lodash.throttle";
 import { HEADER_FIXED_CLASS } from "../constants/headerFixedClass";
 import { MOBILE_MENU_ATTR } from "../constants/mobileMenuAttr";
 
@@ -7,7 +8,7 @@ export default (function () {
     const heroSectionHeight = document.querySelector('section.hero').offsetHeight;
     const body = document.body;
 
-    window.addEventListener('scroll', fixHeader);
+    window.addEventListener('scroll', throttle(fixHeader, 200));
 
     function fixHeader() {
         if (window.pageYOffset > heroSectionHeight) {
