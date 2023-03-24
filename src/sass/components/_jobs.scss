@@ -189,7 +189,7 @@
             display: block;
         }
 
-        div,
+        span,
         &::after,
         &::before {
             width: 4px;
@@ -200,7 +200,7 @@
         }
 
         &::before,
-        div {
+        span {
             margin-right: 5px;
         }
     }
