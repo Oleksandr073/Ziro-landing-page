@@ -1,5 +1,4 @@
 # Qubit landing page
-#HTML&nbsp; &nbsp;#SCSS&nbsp; &nbsp;#JavaScript&nbsp; &nbsp;#landing-page&nbsp;
 
 ## Made with 🛠️
 
@@ -11,9 +10,9 @@
 
 <img alt="Webpack" width="35px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/webpack/webpack.png"/>
 
-## Github Page 💻
+## Page 💻
 
-https://Oleksandr073.github.io/Ziro-landing-page/dist/
+https://ziro-landing-page.netlify.app/
 
 ## Template 👇
 
