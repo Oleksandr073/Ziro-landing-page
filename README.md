@@ -16,6 +16,6 @@ https://ziro-landing-page.netlify.app/
 
 ## Template 👇
 
-https://www.figma.com/file/VjpoB9cCeE3S0zdpl9ZzrL/Find-out-talented-freelancer
+https://www.figma.com/file/aPiFvooq8hQ6gXf15tOFBS/Find-out-talented-freelancer
 
 <img align="left" src="./Ziro-landing-page_1440.jpg"/>
