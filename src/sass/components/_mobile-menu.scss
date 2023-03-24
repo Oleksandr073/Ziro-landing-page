@@ -1,4 +1,6 @@
 .mobile-menu { 
+    max-height: 70vh;
+    
     max-width: 290px;
     padding: 20px 30px;
 
@@ -8,6 +10,7 @@
 
     background-color: #544CAC;
     border-radius: 0 0 20px 20px;
+    border: 10px solid #544CAC;
 
     @include fontSizeLineHeight(16px, 24px); 
     color: #FFFFFF;
@@ -16,6 +19,8 @@
     top: 100%;
     right: 30px;
     z-index: 1;
+
+    overflow: auto;
 
     @include mediaMax($medium) {
         right: 15px;
