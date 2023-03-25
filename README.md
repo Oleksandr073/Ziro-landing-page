@@ -1,4 +1,4 @@
-# Qubit landing page
+# Ziro landing page
 
 ## Made with 🛠️
 
